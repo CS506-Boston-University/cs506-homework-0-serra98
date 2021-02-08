@@ -97,7 +97,7 @@ def train_test_CV_split(X, y,t_f,cv_f):
     return X_train, y_train, X_test, y_test, X_cv , y_cv
 
 #print(import_data('train.csv'))
-print(import_data('test2.txt'))
+#print(import_data('test2.txt'))
 #X,y = import_data('test2.txt')
 #X,y = import_data('train.csv')
 #print(train_test_split(X,y,0.5))

@@ -144,8 +144,8 @@ def standardize_data(X):
 
 
 
-print(import_data('arrhythmia.data'))
-X,y = import_data('arrhythmia.data')
+#print(import_data('arrhythmia.data'))
+#X,y = import_data('arrhythmia.data')
 #print(import_data('test.txt'))
 #X,y = import_data('test.txt')
 #print(y)
@@ -153,7 +153,7 @@ X,y = import_data('arrhythmia.data')
 #print(discard_missing(X,y))
 #print(discard_missing(X,y))
 #X,y = discard_missing(X,y)
-print(shuffle_data(X,y))
+#print(shuffle_data(X,y))
 #print(compute_mean(X))
 #print(compute_std(X))
 #print(standardize_data(X))
