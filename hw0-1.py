@@ -63,10 +63,17 @@ def discard_missing(X,y):
     return X,y
            
 def shuffle_data(X,y):
-    """ shuffle the data - used numpy"""
-    np.random.shuffle(X)
-    np.random.shuffle(y)
-    return X,y
+    """ shuffle the data - used numpy and zip function to shuffle x,y at the same time """
+    newXlist = []
+    newylist = [] 
+    index = list(range(len(X)))
+    np.random.shuffle(index)
+    for i in index: 
+        newXlist.append(X[i])
+        newylist.append(y[i])
+    X = newXlist 
+    y = newylist 
+    return X,y 
 
 def compute_mean(X):
     """ get mean for standard deviation """
@@ -141,12 +148,12 @@ print(import_data('arrhythmia.data'))
 X,y = import_data('arrhythmia.data')
 #print(import_data('test.txt'))
 #X,y = import_data('test.txt')
-print(y)
+#print(y)
 #print(impute_missing(X))
 #print(discard_missing(X,y))
 #print(discard_missing(X,y))
 #X,y = discard_missing(X,y)
-#print(shuffle_data(X,y))
+print(shuffle_data(X,y))
 #print(compute_mean(X))
 #print(compute_std(X))
 #print(standardize_data(X))
