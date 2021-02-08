@@ -4,3 +4,5 @@ hw0-1.py includes coding hw using arrhythmia.data
 "The more skewed the distribution, the greater the difference between the median and mean" 
 hw0-2.py includes coding hw using train.csv 
 
+
+test.txt and test2.txt is a sample test created by me (small data set copied from original data )
