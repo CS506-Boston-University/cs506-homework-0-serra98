@@ -21,8 +21,8 @@ def import_data(filename):
                         z = float(s)
                     except ValueError: 
                         z = s 
-            attributes = replaceStr[:7] 
-            cc = int(replaceStr[7])
+            attributes = replaceStr[:279] 
+            cc = int(replaceStr[279])
             X.append(attributes)
             y.append(cc)
     return X,y
@@ -137,21 +137,20 @@ def standardize_data(X):
 
 
 
-
-##print(import_data('arrhythmia.data'))
-#X,y = import_data('arrhythmia.data')
+print(import_data('arrhythmia.data'))
+X,y = import_data('arrhythmia.data')
 #print(import_data('test.txt'))
-X,y = import_data('test.txt')
-#print(X,y)
+#X,y = import_data('test.txt')
+print(y)
 #print(impute_missing(X))
-print(discard_missing(X,y))
 #print(discard_missing(X,y))
-X,y = discard_missing(X,y)
+#print(discard_missing(X,y))
+#X,y = discard_missing(X,y)
 #print(shuffle_data(X,y))
 #print(compute_mean(X))
 #print(compute_std(X))
 #print(standardize_data(X))
-print(remove_outlier(X,y))
+#print(remove_outlier(X,y))
 
 
 
