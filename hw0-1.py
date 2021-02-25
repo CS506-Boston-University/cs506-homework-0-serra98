@@ -113,15 +113,23 @@ def remove_outlier (X,y):
     num_of_cols = len(X[0])
     mean_list = compute_mean(X)
     std_dv_list = compute_std(X)
+    newXlist = []
+    newylist = []
     
+    index = list(range(num_of_rows))
+    for i in index: 
+        newXlist.append(X[i])
+        newylist.append(y[i])
     
     for c in range(num_of_cols):
         mean = mean_list[c]
         stdv = std_dv_list[c]
         for r in range(num_of_rows):
             if X[r][c] < (mean - stdv * 2.0 ) or X[r][c] > (mean + stdv * 2.0):
-                X.remove(X[r])
-                y.remove(y[r])
+                newXlist.remove(X[r])
+                newylist.remove(y[r])
+    X = newXlist
+    y = newylist 
     return X,y 
 
 def standardize_data(X):
@@ -145,19 +153,19 @@ def standardize_data(X):
 
 
 #print(import_data('arrhythmia.data'))
-#X,y = import_data('arrhythmia.data')
+X,y = import_data('arrhythmia.data')
 #print(import_data('test.txt'))
 #X,y = import_data('test.txt')
 #print(y)
 #print(impute_missing(X))
 #print(discard_missing(X,y))
-#print(discard_missing(X,y))
-#X,y = discard_missing(X,y)
+print(discard_missing(X,y))
+X,y = discard_missing(X,y)
 #print(shuffle_data(X,y))
-#print(compute_mean(X))
-#print(compute_std(X))
-#print(standardize_data(X))
-#print(remove_outlier(X,y))
+print(compute_mean(X))
+print(compute_std(X))
+print(standardize_data(X))
+print(remove_outlier(X,y))
 
 
 

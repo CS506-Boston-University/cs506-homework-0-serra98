@@ -1,4 +1,6 @@
 Serra Jung - U63506154
+Collabed with Richard Lee 
+
 hw0-1.py includes coding hw using arrhythmia.data 
 2b) It is better to use median when there may be potential large number of outliers or skewed data: 
 "The more skewed the distribution, the greater the difference between the median and mean" 
